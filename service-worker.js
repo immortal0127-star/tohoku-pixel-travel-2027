@@ -1,0 +1,5 @@
+const CACHE='tohoku-2027-0419-v1';
+const ASSETS=['./','./index.html','./app.js','./style.css','./landscape.svg','./icon.svg','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
+self.addEventListener('activate',e=>{e.waitUntil((async()=>{await Promise.all((await caches.keys()).filter(k=>k.startsWith('tohoku-2027-0419-')&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})())});
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;e.respondWith((async()=>{try{const response=await fetch(e.request);if(response.ok){const c=await caches.open(CACHE);await c.put(e.request,response.clone())}return response}catch{const cached=await caches.match(e.request);if(cached)return cached;if(e.request.mode==='navigate')return caches.match('./index.html');return Response.error()}})())});

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#314d42">
+  <meta name="description" content="2027/04/19–04/28 東北像素旅記，已知班機與待安排景點，行程、導航、預約、匯率、購物、準備清單及備忘錄。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="東北旅記">
+  <title>東北像素旅記 · 2027</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-180.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a href="#" id="brand"><img src="./icon.svg" alt="" width="30" height="30">東北像素旅記</a><span class="mini">SAVE SLOT 2027</span></header>
+  <main class="app">
+    <section class="hero" aria-label="日本東北旅程">
+      <div class="hero-copy"><p class="eyebrow">A LITTLE ADVENTURE IN JAPAN</p><h1>東北，<br>下一場冒險。</h1><p>把旅途的小事，收進像素裡。</p><div class="trip-badges"><span>2027.04.19 — 04.28</span><span>10 天 9 夜</span><span class="status">規劃中</span></div></div>
+      <div class="hero-art" role="img" aria-label="像素櫻花、鳥居、群山和列車"><img src="./landscape.svg" alt="" width="960" height="330"><span class="scene-label">TOHOKU QUEST <b>春の旅</b></span></div>
+      <div class="journey"><span>START <b>仙台</b></span><span class="journey-line">·················· → ··················</span><span><b>青森</b> &amp; 東北</span><span class="journey-line">········ →</span><span>RETURN <b>仙台</b></span></div>
+    </section>
+    <div class="page-heading"><div><p class="eyebrow" id="pageKicker">YOUR TRAVEL LOG</p><h2 id="pageTitle">旅程日誌</h2></div><span id="pageBadge" class="small-badge">只填入已知資訊</span></div>
+    <nav class="subnav" aria-label="行程資訊"><button data-page="itinerary">每日行程</button><button data-page="destinations">待安排景點 <span>6</span></button><button data-page="lodging">住宿</button><button data-page="notes">交通提醒</button></nav>
+    <div id="content"></div>
+    <footer class="page-footer"><span>TOHOKU QUEST · 2027</span><span>每一段旅途，慢慢填上。</span></footer>
+  </main>
+  <nav class="bottom-nav" aria-label="主要功能">
+    <button data-page="itinerary"><i>▦</i><span>行程</span></button><button data-page="reservations"><i>▤</i><span>預約</span></button><button data-page="exchange"><i>¥</i><span>匯率</span></button><button data-page="shopping"><i>▣</i><span>購物</span></button><button data-page="packing"><i>☑</i><span>準備</span></button><button data-page="memos"><i>▥</i><span>備忘</span></button><button data-page="settings"><i>⚙</i><span>設定</span></button>
+  </nav>
+  <dialog id="editor"><form id="editForm"><div class="dialog-heading"><h2 id="editorTitle">新增</h2><button type="button" id="closeEditor" class="icon-button" aria-label="關閉">×</button></div><div id="editFields"></div><div class="actions"><button class="button primary" type="submit">儲存</button><button class="button" type="button" id="cancelEditor">取消</button></div></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
