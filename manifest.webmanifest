@@ -1,14 +1,14 @@
 {
   "id": "./",
-  "name": "東北像素旅記 · 2027",
-  "short_name": "東北旅記",
+  "name": "東北春日旅の栞 · 2027",
+  "short_name": "東北旅の栞",
   "lang": "zh-Hant",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f4e9",
-  "theme_color": "#314d42",
-  "description": "2027/04/19–04/28 日本東北旅遊 app",
+  "background_color": "#f7fafc",
+  "theme_color": "#4479a5",
+  "description": "2027/04/19–04/28 東北春日旅行日誌、指南工具箱與天氣",
   "icons": [
     {
       "src": "./icon-192.png",
